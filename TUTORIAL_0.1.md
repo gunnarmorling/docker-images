@@ -37,7 +37,7 @@ An important concept when working with Docker is the _Docker host_. In order to 
 
 If you're running Docker on Linux, then the Docker daemon is running on your machine and your machine is the Docker host, and all mapped ports are on your machine. So for example, if you were to run a web server in a Docker container and map port 80 in the container to port 80 on the Docker host (e.g., your machine), then you can point your browser to `localhost:80`, and the Docker daemon will forward the request to the container and return the response.
 
-Unfortunately, things are as straightforward when running Docker on Windows or OS X. When you use Docker Machine, the Docker daemon runs in the virtual machine, which means the _virtual machine_ is the Docker host. So, if you were to run a web server in a Docker container and map port 80 in the container to port 80 on the Docker host (e.g., the virtual machine), then you must point your browser to the _virtual machine's address_ in order to hit the web server -- pointing your browser to `localhost:80' will not work.
+Unfortunately, things are not as straightforward when running Docker on Windows or OS X. When you use Docker Machine, the Docker daemon runs in the virtual machine, which means the _virtual machine_ is the Docker host. So, if you were to run a web server in a Docker container and map port 80 in the container to port 80 on the Docker host (e.g., the virtual machine), then you must point your browser to the _virtual machine's address_ in order to hit the web server -- pointing your browser to `localhost:80' will not work.
 
 The following command will display information about the virtual machine named "default":
 
